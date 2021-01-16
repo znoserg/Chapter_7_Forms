@@ -27,7 +27,7 @@
     Ввод текстовой области <br>
     <p>
         <form action="http://www.test.ru/sub.php">
-        <textarea name="Comments" cols="25" rows="7">Опишите Ваши впечатления об HTML</textarea>
+        <textarea name="Comments" cols="25" rows="7">Опишите Ваши впечатления от HTML</textarea>
         </form>
     </p>
 
@@ -35,18 +35,18 @@
     Выберите одну культуру, которую Вы хотели бы выращивать:
     <p>
     <form action="http://www.test.ru/sub.php">
-    <input type="radio" name="plant" value="blueberry" checked="checked"> Голубика
-    <input type="radio" name="plant" value="strawberry"> Клубника
-    <input type="radio" name="plant" value="gooseberry"> Крыжовник
+    <input type="radio" name="plant" value="blueberry" checked="checked" /> Голубика
+    <input type="radio" name="plant" value="strawberry" /> Клубника
+    <input type="radio" name="plant" value="gooseberry" /> Крыжовник
     </form>
     </p>
 
     Флажки <br>
     <form action="http://www.test.ru/sub.php"
     <p>Что Вы хотели бы выращивать?</p>
-    <input type="checkbox" name="plant" value="blueberry" checked="checked"> Голубика
-    <input type="checkbox" name="plant" value="strawberry"> Клубника
-    <input type="checkbox" name="plant" value="gooseberry"> Крыжовник
+    <input type="checkbox" name="plant" value="blueberry" checked="checked" /> Голубика
+    <input type="checkbox" name="plant" value="strawberry" /> Клубника
+    <input type="checkbox" name="plant" value="gooseberry" /> Крыжовник
     </form>
 
 
@@ -61,7 +61,86 @@
         </select>
     </form>
 
+    Раскрывающийся список с возможностью множественного выбора <br>
 
+    <p>Выберите культуру, которую Вы хотели бы выращивать <br>
+        (Вы можете выбрать несколько культур, для этого
+        удерживайте клавишу Ctrl):</p>
+    <form action="http://www.test.ru/sub.php">
+        <select name="plant" size="2" multiple="multiple">
+            <option value="blueberry">Голубика</option>
+            <option value="strawberry">Клубника</option>
+            <option value="gooseberry">Крыжовник</option>
+        </select>
+    </form>
 
+    Загрузка файлов на сервер - фото<br>
+    <p>Отправьте фото на наш сайт</p>
+    <form action="http://www.test.ru/sub.php" method="post">
+        <input type="file" name="foto" /><br>
+        <input type="submit" value="Отправить" />
+    </form>
+
+    Загрузка формы с данными на сервер - адрес электронной почты<br>
+    <p>Отправьте адрес электронной почты на наш сайт</p>
+    <form action="http://www.test.ru/sub.php">
+        <input type="text" name="email" />
+        <input type="submit" name="for_list_of_email" value="Отправить" />
+    </form>
+
+    Загрузка формы с данными на сервер - адрес электронной почты, графическая кнопка<br>
+    <p>Отправьте адрес электронной почты на наш сайт</p>
+    <form action="http://www.test.ru/sub.php">
+        <input type="text" name="email" />
+        <input type="image" src="images/Cape_Town_120х60.jpg" width="120" height="60" />
+    </form>
+
+    Загрузка формы с данными на сервер - имя, кнопка Button<br>
+    <p>Отправьте Ваше имя на наш сайт</p>
+    <form action="http://www.test.ru/sub.php">
+        <input type="text" name="name_of_person" />
+        <button><img src="images/Cape_Town_120х60.jpg" width="120" height="60" />Отправить</button>
+    </form>
+
+    Метки элементов формы, группировка элементов формы, а также валидация данных формы
+    <p>
+    <form action="http://www.test.ru/sub.php">
+    </p>
+    <fieldset>
+        <legend>Просим пройти небольшой опрос</legend>
+        <label>Введите Ваше имя<input type="text" name="username" required="required" /></label>
+        <input type="submit" value="Отправить" />
+    <p>
+    <form action="http://www.test.ru/sub.php">
+    Что Вы хотели бы выращивать?
+        <input id="blueberry" type="checkbox" name="plant" value="blueberry" checked="checked" />
+        <label for="blueberry">Голубика</label>
+        <input id="strawberry"  type="checkbox" name="plant" value="strawberry" />
+        <label for="strawberry">Клубника</label>
+        <input id="gooseberry"  type="checkbox" name="plant" value="gooseberry" />
+        <label for="gooseberry">Крыжовник</label>
+    </fieldset>
+    </form>
+    </p>
+
+    Ввод даты, адреса электронной почты и URL-адреса
+    <p>
+    <form action="http://www.test.ru/sub.php" method="post">
+        <label for="fishing">Выберите день для рыбалки</label>
+        <input id="fishing" type="date" name="date_of_fishing" />
+        <p>Напишите нам</p>
+        <input type="email" name="email" />
+        <input type="submit" value="Отправить" />
+        <p>Пожалуйста, введите адрес Вашего сайта</p>
+        <input type="url" name="cite" />
+        <input type="submit" value="Отправить" />
+    </form>
+    </p>
+
+    <p>Поиск</p>
+    <form action="http://www.test.ru/sub.php" method="post">
+        <input type="search" name="to_find" placeholder="Купить видеокамеру" />
+        <input type="submit" value="Поиск" />
+    </form>
 
 </body>
